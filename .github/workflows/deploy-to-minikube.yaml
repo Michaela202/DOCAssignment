@@ -23,7 +23,7 @@ jobs:
           export SHELL=/bin/bash
           eval $(minikube -p minikube docker-env)
           docker build -f ./Dockerfile -t devops-demo .
-          docker build -f ./webapp/Dockerfile -t doc-react ./webapp
+          docker build -f ./web/Dockerfile -t doc-react ./web
           echo -n "Verifying images: "
           docker images
       - name: Deploy to Minikube
